@@ -1,1 +1,1 @@
-# tic-tac-toe-term
+# The Tic Tac Toe in terminal, written with FTXUI
