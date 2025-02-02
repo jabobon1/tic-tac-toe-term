@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.28)
 project(tic_tac_toe_term)
 
 set(CMAKE_CXX_STANDARD 14)
