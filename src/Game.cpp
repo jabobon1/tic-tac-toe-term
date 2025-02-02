@@ -34,7 +34,7 @@ void Game::MoveCursor(Direction direction) {
     switch (direction) {
         case LEFT:
             if (boardCellSelector % boardSize == 0) {
-                boardCellSelector += boardSize;
+                boardCellSelector += boardSize -1;
             } else {
                 boardCellSelector--;
             }
@@ -51,7 +51,7 @@ void Game::MoveCursor(Direction direction) {
                 const int lastRow = boardSize * boardSize - boardSize;
                 boardCellSelector = lastRow + boardCellSelector % boardSize;
             } else {
-                boardCellSelector -= 3;
+                boardCellSelector -= boardSize;
             }
             break;
         case DOWN:
