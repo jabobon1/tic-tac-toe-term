@@ -20,7 +20,7 @@ public:
 
     int GetCell(int idx) const;
 
-    std::vector<std::vector<int> > GetBoard() const;
+    std::vector<std::vector<int> > GetBoard();
 };
 
 

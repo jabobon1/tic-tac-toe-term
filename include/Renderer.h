@@ -7,15 +7,11 @@
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
 
 class Renderer {
-    const ftxui::ScreenInteractive &screen;
 
 public:
-    Renderer(): screen(ftxui::ScreenInteractive::FitComponent()) {
-    };
+    Renderer() = default;
 
-    ~Renderer();
-
-    ftxui::Component ComponentFromBoard(std::vector<std::vector<int> > board);
+    ~Renderer() = default;
 
     void Render(ftxui::Component &component, std::function<bool(ftxui::Event)>);
 };

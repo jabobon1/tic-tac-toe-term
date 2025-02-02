@@ -3,6 +3,7 @@
 //
 
 #include "../include/Game.h"
+#include "../include/utils.h"
 
 
 Game::Game(const int boardSize): board(Board(boardSize)), boardSize(boardSize) {
@@ -80,6 +81,6 @@ void Game::SelectThis() {
 
 
 void Game::Run() {
-    auto component = renderer.ComponentFromBoard(board.GetBoard());
+    auto component = FromTableToComponent(board, boardCellSelector, player1Turn);
     renderer.Render(component, EventHandler());
 }

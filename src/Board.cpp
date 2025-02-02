@@ -25,3 +25,7 @@ int Board::GetCell(int idx) const {
     const auto cell = getCellFromIndex(idx);
     return board[cell.first][cell.second];
 }
+
+std::vector<std::vector<int> > Board::GetBoard() {
+    return board;
+};
