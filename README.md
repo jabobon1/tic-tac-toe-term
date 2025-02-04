@@ -9,3 +9,5 @@ cmake .. &&\
 cmake --build . &&\
 ./tic_tac_toe_term 
 ```
+![demo](images/demo.gif)
+

@@ -42,16 +42,16 @@ ftxui::Component FromTableToComponent(Board &board, int &cursor, bool &player1Tu
         ftxui::Elements children;
         ftxui::Elements row;
         for (int i = 0; i < rowSize * rowSize; i++) {
-            auto cell = board.GetCell(i);
-            ftxui::Color curColor = getCursorColor(cell, i, cursor);
+            const auto cell = board.GetCell(i);
+            const ftxui::Color curColor = getCursorColor(cell, i, cursor);
 
 
             row.push_back(ftxui::text(getFigure(cell)) | ftxui::bold | ftxui::center |
-                          ftxui::size(ftxui::WIDTH, ftxui::EQUAL, 10) | ftxui::border |
-                          ftxui::color(curColor));
+                          size(ftxui::WIDTH, ftxui::EQUAL, 10) | ftxui::border |
+                          color(curColor));
 
             if ((i + 1) % rowSize == 0) {
-                children.push_back(ftxui::hbox(std::move(row)));
+                children.push_back(hbox(std::move(row)));
                 children.push_back(ftxui::separator());
             }
         }
